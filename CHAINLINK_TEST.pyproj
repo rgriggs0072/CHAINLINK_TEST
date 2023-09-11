@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bc55d881-a7b7-4a39-a410-14fd9c052a2e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>CHAINLINK_TEST.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,6 +13,7 @@
     <Name>CHAINLINK_TEST</Name>
     <RootNamespace>CHAINLINK_TEST</RootNamespace>
     <TestFramework>Pytest</TestFramework>
+    <InterpreterId>MSBuild|CHAINLINKTEST|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +24,52 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CHAINLINK_TEST.py" />
+    <Compile Include="1_Home.py" />
+    <Compile Include="Foodmaxx_DG_format.py" />
+    <Compile Include="FoodMaxx_resetSH_format.py" />
+    <Compile Include="Luckys_DG_format.py" />
+    <Compile Include="Luckys_resetSH_format.py" />
+    <Compile Include="pages\2_Reset_Data_Update.py" />
+    <Compile Include="pages\3_Gap_Data_Analysis.py" />
+    <Compile Include="pages\4_Load_Company_Data.py" />
+    <Compile Include="pages\5_Load_Customer_Data.py" />
+    <Compile Include="pages\6_Additional_Reports.py" />
+    <Compile Include="pages\DISTRO_GRID_Processing.py" />
+    <Compile Include="Raleys_DG_format.py" />
+    <Compile Include="Raleys_resetSH_format.py" />
+    <Compile Include="Reset_Schedule_to_Snowflake_Uploader.py" />
+    <Compile Include="Safeway_DG_format.py" />
+    <Compile Include="Safeway_resetSH_format.py" />
+    <Compile Include="Savemart_DG_format.py" />
+    <Compile Include="Savemart_resetSH_format.py" />
+    <Compile Include="Smart_Final_DG_format.py" />
+    <Compile Include="Smart_Final_resetSH_format.py" />
+    <Compile Include="Sprouts_DG_format.py" />
+    <Compile Include="Sprouts_resetSH_format.py" />
+    <Compile Include="Target_DG_format.py" />
+    <Compile Include="Walmart_DG_format.py" />
+    <Compile Include="Walmart_resetSH_format.py" />
+    <Compile Include="Wholefoods_DG_format.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="CHAINLINKTEST\">
+      <Id>CHAINLINKTEST</Id>
+      <Version>3.10</Version>
+      <Description>CHAINLINKTEST (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="images\" />
+    <Folder Include="pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\style.css" />
+    <Content Include="images\DeltaPacific_Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
