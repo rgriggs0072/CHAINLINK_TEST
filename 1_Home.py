@@ -1,6 +1,6 @@
 #from cgitb import text
 import streamlit as st
-from streamlit_option_menu import option_menu
+#from streamlit_option_menu import option_menu
 import snowflake.connector
 import pandas as pd
 from PIL import Image
