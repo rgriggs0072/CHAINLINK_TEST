@@ -114,7 +114,8 @@ conn = snowflake.connector.connect(
 # End CREATE CONNECTION TO SNOWFLAKE
 #====================================================================================================================
 
-
+st.write(snowflake_creds["database"])
+st.write(snowflake_creds["schema"])
 
 #====================================================================================================================
 # Block of code that handles the dropdown used to decide which chain the reset schedule if for
